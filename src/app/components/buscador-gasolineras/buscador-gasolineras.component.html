@@ -1,5 +1,7 @@
-<mat-form-field>
-    <mat-label>{{gasolinera.municipio}}</mat-label>
+<div id="buscadores">
+  <h6 id="titulos">{{nombre}}</h6>
+  <mat-form-field id="buscador">
+    <mat-label>Gasolinera</mat-label>
     <input type="text"
            matInput
            [(ngModel)]="valor" 
@@ -12,4 +14,5 @@
       <p><strong>{{ gasolinera.nombre }}</strong> - {{ gasolinera.direccion }}</p>
     </div>
   </div>
+</div>
   

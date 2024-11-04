@@ -1,4 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
+body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+#buscadores{
+    margin: 12pt;
+    text-align: center;
+}
+
+#titulos{
+    margin: 24pt;
+}
+
+#buscador{
+    min-width: 400px;
+}
+
+.row{
+    width: 100%;
+    background-color: #F3EFEF;
+}
+.buscador-municipios{
+    width: 28%;
+    min-height: 85vh;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+.buscador-gasolineras{
+    width: 28%;
+    min-height: 85vh;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+.otros-datos{
+    width: 25%;
+    min-height: 85vh;
+    margin: 25pt;
+}
+
+.carburantes{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+
+.informacion{
+    background-color: rgb(255, 255, 255);
+    margin-top: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
