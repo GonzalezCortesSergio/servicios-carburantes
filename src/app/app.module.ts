@@ -10,6 +10,7 @@ import { BuscadorMunicipiosComponent } from './components/buscador-municipios/bu
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GasolinerasComponent } from './components/gasolineras/gasolineras.compo
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

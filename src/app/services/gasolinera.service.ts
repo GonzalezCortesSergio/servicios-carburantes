@@ -13,6 +13,6 @@ export class GasolineraService {
 
   getGasolineras(): Observable<GasolineraResponse> {
 
-    return this.http.get<GasolineraResponse>("https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/help/operations/PreciosEESSTerrestres")
+    return this.http.get<GasolineraResponse>("https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/")
   }
 }
