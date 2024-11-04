@@ -11,13 +11,15 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 import { FormsModule } from '@angular/forms';
+import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BuscadorMunicipiosComponent,
     NavMenuComponent,
-    GasolinerasComponent
+    GasolinerasComponent,
+    BuscadorGasolinerasComponent
   ],
   imports: [
     BrowserModule,

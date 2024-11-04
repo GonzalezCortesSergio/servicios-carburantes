@@ -1,0 +1,15 @@
+<mat-form-field>
+    <mat-label>{{gasolinera.municipio}}</mat-label>
+    <input type="text"
+           matInput
+           [(ngModel)]="valor" 
+           (input)="onChange()" 
+           (keyup.enter)="onClick()" />
+  </mat-form-field>
+  
+  <div class="mx-auto">
+    <div *ngFor="let gasolinera of gasolinerasFiltradas">
+      <p><strong>{{ gasolinera.nombre }}</strong> - {{ gasolinera.direccion }}</p>
+    </div>
+  </div>
+  

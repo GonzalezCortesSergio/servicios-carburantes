@@ -3,24 +3,24 @@
     background-color: #F3EFEF;
 }
 .buscador-municipios{
-    width: 30%;
-    height: 75%;
+    width: 28%;
+    min-height: 85vh;
     background-color: white;
     margin: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
 }
 .buscador-gasolineras{
-    width: 30%;
-    height: 75%;
+    width: 28%;
+    min-height: 85vh;
     background-color: white;
     margin: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
 }
 .otros-datos{
-    width: 30%;
-    height: 75%;
+    width: 25%;
+    min-height: 85vh;
     margin: 25pt;
 }
 
