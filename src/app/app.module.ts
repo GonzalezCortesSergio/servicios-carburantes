@@ -8,11 +8,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './modules/material/material.module';
 import { BuscadorMunicipiosComponent } from './components/buscador-municipios/buscador-municipios.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BuscadorMunicipiosComponent
+    BuscadorMunicipiosComponent,
+    NavMenuComponent,
+    GasolinerasComponent
   ],
   imports: [
     BrowserModule,
