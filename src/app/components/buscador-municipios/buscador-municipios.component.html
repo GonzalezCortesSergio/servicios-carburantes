@@ -1,0 +1,16 @@
+<mat-form-field>
+    <mat-label>Municipios</mat-label>
+    <input type="text"
+    matInput
+    [(ngModel)]="valor" (input)="onChange()"/>
+</mat-form-field>
+
+<div class="w-25 h-25 overflow-auto">
+        @for (nombre of listaNombres; track $index) {
+            <div class="text-center m-3">
+            <button mat-fab extended (click)="onClick(nombre)">
+                {{nombre}}
+              </button>
+            </div>
+        }
+</div>
