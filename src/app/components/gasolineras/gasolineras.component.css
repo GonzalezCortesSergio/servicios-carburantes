@@ -1,0 +1,38 @@
+.row{
+    width: 100%;
+    background-color: #F3EFEF;
+}
+.buscador-municipios{
+    width: 30%;
+    height: 75%;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+.buscador-gasolineras{
+    width: 30%;
+    height: 75%;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+.otros-datos{
+    width: 30%;
+    height: 75%;
+    margin: 25pt;
+}
+
+.carburantes{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
+
+.informacion{
+    background-color: rgb(255, 255, 255);
+    margin-top: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+}
