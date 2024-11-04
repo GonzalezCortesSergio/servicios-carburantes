@@ -1,0 +1,13 @@
+<mat-form-field>
+    <mat-label>Municipios</mat-label>
+    <input type="text"
+    matInput
+    [(ngModel)]="valor" (input)="onChange()"/>
+</mat-form-field>
+
+<div class="mx-auto">
+
+    @for (nombre of listaNombres; track $index) {
+        <p>{{nombre}}</p>
+    }
+</div>
