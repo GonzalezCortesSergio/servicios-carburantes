@@ -31,8 +31,8 @@ export class BuscadorMunicipiosComponent {
     })
   }
 
-  onClick() {
+  onClick(nombre: string) {
 
-    this.nombre.emit(this.valor);
+    this.nombre.emit(nombre);
   }
 }
