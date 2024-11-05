@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class GasolinerasComponent {
 
+  municipio = "Gasolineras"
+
+  llamadaMunicipio(municipio: string){
+  
+      this.municipio = municipio
+    
+  }
+
+  lasPatate(promotor: string) {
+
+
+  }
+
 }

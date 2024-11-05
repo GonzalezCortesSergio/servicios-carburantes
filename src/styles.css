@@ -22,12 +22,26 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 }
 .buscador-municipios{
     width: 28%;
-    min-height: 85vh;
+    min-height: 88vh;
+    max-height: 88vh;
     background-color: white;
     margin: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
+    display: grid;
+    overflow: scroll;
 }
+.gasolinera-celda{
+    border: #D5FFA1, solid, 1pt;
+    background-color: #E8FFCC;
+    
+}
+.gasolinera-celda:hover{
+    border: #D5FFA1, solid, 1pt;
+    background-color: #D5FFA1;
+    
+}
+
 .buscador-gasolineras{
     width: 28%;
     min-height: 85vh;

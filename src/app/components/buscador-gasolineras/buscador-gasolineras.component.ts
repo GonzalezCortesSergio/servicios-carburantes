@@ -12,6 +12,8 @@ export class BuscadorGasolinerasComponent {
 
   @Input() valor!: string;
 
+  @Input() titulo!: string;
+
   gasolinerasFiltradas: Array<{ nombre: string, direccion: string }> = [];
 
   constructor(private service: GasolineraService) {}
