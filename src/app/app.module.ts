@@ -12,6 +12,7 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
 import { FormsModule } from '@angular/forms';
 import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
+import { CarburantesComponent } from './components/carburantes/carburantes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/
     BuscadorMunicipiosComponent,
     NavMenuComponent,
     GasolinerasComponent,
-    BuscadorGasolinerasComponent
+    BuscadorGasolinerasComponent,
+    CarburantesComponent
   ],
   imports: [
     BrowserModule,
