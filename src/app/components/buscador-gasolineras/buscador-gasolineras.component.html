@@ -1,12 +1,13 @@
 <div id="buscadores">
   <h6 id="titulos">{{titulo}}</h6>
-  <mat-form-field id="buscador">
-    <mat-label>Gasolinera</mat-label>
-    <input type="text"
-           matInput
-           [(ngModel)]="valor" 
-           (input)="onChange()" 
-           (keyup.enter)="onClick()" />
+
+  <mat-form-field>
+    <mat-label>Filtrar por Precios</mat-label>
+    <mat-select>
+      @for (precio of precios; track $index) {
+        <mat-option [value]="precio">{{precio[1]}}</mat-option>
+      }
+    </mat-select>
   </mat-form-field>
   
   <div class="mx-auto">

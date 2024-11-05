@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GasolineraService } from '../../services/gasolinera.service';
 
 @Component({
   selector: 'app-gasolineras',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class GasolinerasComponent {
 
   municipio = "Gasolineras"
+  
+
+  constructor(private service: GasolineraService) {}
 
   llamadaMunicipio(municipio: string){
   

@@ -14,6 +14,20 @@ export class BuscadorGasolinerasComponent {
 
   @Input() titulo!: string;
 
+  @Input() gas
+
+  nombreGasolinera=""
+  direccion=""
+  precios = [
+    {1: "< 0.80€/l"
+    },
+    {2: "0.80-1€/l"
+    },
+    {3: "> 1€/l"      
+    }
+
+   ]
+
   gasolinerasFiltradas: Array<{ nombre: string, direccion: string }> = [];
 
   constructor(private service: GasolineraService) {}
