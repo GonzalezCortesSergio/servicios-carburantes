@@ -11,16 +11,23 @@ export class GasolinerasComponent {
   municipio = "Gasolineras"
   
 
-  constructor(private service: GasolineraService) {}
+  municipioSeleccionado!: string;
+  carburanteSeleccionado!: string;
+  precioFiltrado!: string;
 
-  llamadaMunicipio(municipio: string){
-  
-      this.municipio = municipio
-    
+  llamadaMunicipio(municipio: string) {
+    this.municipioSeleccionado = municipio;
+  }
+
+  actualizarCarburante(carburante: string) {
+    this.carburanteSeleccionado = carburante;
+  }
+
+  actualizarPrecio(precio: string) {
+    this.precioFiltrado = precio;
   }
 
   lasPatate(promotor: string) {
-
 
   }
 

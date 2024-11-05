@@ -1,19 +1,18 @@
 <div id="buscadores">
   <h6 id="titulos">{{titulo}}</h6>
 
-  <mat-form-field>
-    <mat-label>Filtrar por Precios</mat-label>
-    <mat-select>
-      @for (precio of precios; track $index) {
-        <mat-option [value]="precio">{{precio[1]}}</mat-option>
-      }
-    </mat-select>
-  </mat-form-field>
-  
-  <div class="mx-auto">
-    <div *ngFor="let gasolinera of gasolinerasFiltradas">
-      <p><strong>{{ gasolinera.nombre }}</strong> - {{ gasolinera.direccion }}</p>
-    </div>
+  <div>
+    <label for="carburante">Carburante:</label>
+    <select id="carburante" (change)="seleccionarCarburante($event.target.value)">
+      <option *ngFor="let tipo of tiposCarburantes">{{ tipo }}</option>
+    </select>
   </div>
+  
+  <ul>
+    <li *ngFor="let gasolinera of gasolinerasFiltradas">
+      {{ gasolinera.nombre }} - {{ gasolinera.direccion }} - Precio: {{ gasolinera.precio }}
+    </li>
+  </ul>
+  
 </div>
   

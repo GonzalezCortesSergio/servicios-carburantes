@@ -13,6 +13,7 @@ import { GasolinerasComponent } from './components/gasolineras/gasolineras.compo
 import { FormsModule } from '@angular/forms';
 import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
 import { CarburantesComponent } from './components/carburantes/carburantes.component';
+import { PrecioComponent } from './components/precio/precio.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CarburantesComponent } from './components/carburantes/carburantes.compo
     NavMenuComponent,
     GasolinerasComponent,
     BuscadorGasolinerasComponent,
-    CarburantesComponent
+    CarburantesComponent,
+    PrecioComponent
   ],
   imports: [
     BrowserModule,

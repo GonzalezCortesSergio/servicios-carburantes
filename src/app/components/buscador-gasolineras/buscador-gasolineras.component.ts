@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { GasolineraService } from '../../services/gasolinera.service';
+import { ListaEessprecio } from '../../interfaces/gasolinera.interface';
 
 @Component({
   selector: 'app-buscador-gasolineras',
@@ -8,45 +9,52 @@ import { GasolineraService } from '../../services/gasolinera.service';
 })
 export class BuscadorGasolinerasComponent {
 
-  @Output() nombre = new EventEmitter<string>();
-
-  @Input() valor!: string;
-
   @Input() titulo!: string;
 
-  @Input() gas
+  @Input() municipio!: string;
+  @Output() carburanteSeleccionado = new EventEmitter<string>();
 
-  nombreGasolinera=""
-  direccion=""
-  precios = [
-    {1: "< 0.80€/l"
-    },
-    {2: "0.80-1€/l"
-    },
-    {3: "> 1€/l"      
-    }
+  tiposCarburantes = ['Gasóleo', 'Gasolina', 'Hidrógeno'];
+  gasolinerasFiltradas: Array<{ nombre: string, direccion: string, precio: string }> = [];
 
-   ]
-
-  gasolinerasFiltradas: Array<{ nombre: string, direccion: string }> = [];
+  carburante!: string;
 
   constructor(private service: GasolineraService) {}
 
-  onChange() {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['municipio']) {
+      this.obtenerGasolinerasPorMunicipio(this.municipio);
+    }
+  }
+
+  obtenerGasolinerasPorMunicipio(municipio: string) {
     this.gasolinerasFiltradas = [];
-    this.service.getGasolineras().subscribe(res => {
+    this.service.getGasolineras().subscribe((res: { ListaEESSPrecio: ListaEessprecio[] }) => {
       res.ListaEESSPrecio.forEach(gasolinera => {
-        if (gasolinera.Municipio.toLowerCase().includes(this.valor.toLowerCase()) && this.valor !== "") {
+        if (gasolinera.Municipio.toLowerCase() === municipio.toLowerCase()) {
+          // Accede a la propiedad de precio en función del carburante seleccionado
+          let precio = 'N/A';
+          if (this.carburante === 'Gasóleo') {
+            precio = gasolinera['Precio Gasoleo A'];
+          } else if (this.carburante === 'Gasolina') {
+            precio = gasolinera['Precio Gasolina 95 E5'];
+          } else if (this.carburante === 'Hidrógeno') {
+            precio = gasolinera['Precio Hidrogeno'];
+          }
+
           this.gasolinerasFiltradas.push({
             nombre: gasolinera.Rótulo,
-            direccion: gasolinera.Dirección
+            direccion: gasolinera.Dirección,
+            precio
           });
         }
       });
     });
   }
 
-  onClick() {
-    this.nombre.emit(this.valor); 
+  seleccionarCarburante(value: string) {
+    this.carburante = value;  
+    this.carburanteSeleccionado.emit(value); 
   }
+  
 }
