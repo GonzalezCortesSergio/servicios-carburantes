@@ -14,7 +14,7 @@ export class BuscadorGasolinerasComponent {
 
   @Input() titulo!: string;
 
-  @Input() gas
+  /*@Input() gas*/
 
   nombreGasolinera=""
   direccion=""
@@ -31,7 +31,7 @@ export class BuscadorGasolinerasComponent {
   gasolinerasFiltradas: Array<{ nombre: string, direccion: string }> = [];
 
   constructor(private service: GasolineraService) {}
-
+/*
   onChange() {
     this.gasolinerasFiltradas = [];
     this.service.getGasolineras().subscribe(res => {
@@ -45,7 +45,7 @@ export class BuscadorGasolinerasComponent {
       });
     });
   }
-
+*/
   onClick() {
     this.nombre.emit(this.valor); 
   }
