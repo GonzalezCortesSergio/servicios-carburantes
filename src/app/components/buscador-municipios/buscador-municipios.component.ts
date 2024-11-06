@@ -23,11 +23,9 @@ export class BuscadorMunicipiosComponent implements OnInit{
       this.service.getGasolineras().subscribe(res => {
 
         res.ListaEESSPrecio.forEach((gasolinera: any) => {
-
-          console.log(this.parseGasolinera(gasolinera));
-          /*
-          this.listaNombres.add(gasolinera.Municipio);
-          */
+          
+          this.listaNombres.add(BuscadorMunicipiosComponent.parseGasolinera(gasolinera).Municipio);
+          
         })
       })
   }
@@ -38,9 +36,10 @@ export class BuscadorMunicipiosComponent implements OnInit{
 
       res.ListaEESSPrecio.forEach((gasolinera: any) => {
 
-        let gasolineraWena = this.parseGasolinera(gasolinera);
-
-        console.log(gasolineraWena);
+        let gasolineraWena = BuscadorMunicipiosComponent.parseGasolinera(gasolinera);
+        if(gasolineraWena.Municipio.toLowerCase().includes(this.valor.toLowerCase())){
+          this.listaNombres.add(gasolineraWena.Municipio)
+        }
       })
     })
   }
@@ -50,7 +49,7 @@ export class BuscadorMunicipiosComponent implements OnInit{
     this.nombre.emit(nombre);
   }
 
-  private parseGasolinera(gasolinera: any) {
+  public static parseGasolinera(gasolinera: any) {
 
     let gasolineraWena = new Gasolinera("", "", "", "", "", "", ""
       , "", "", "", "", "", "", "", "", "", "", "", "", "",

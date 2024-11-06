@@ -3,7 +3,7 @@
 
   <div>
     <label for="carburante">Carburante:</label>
-    <select id="carburante" (change)="seleccionarCarburante($event.target.value)">
+    <select id="carburante" (change)="seleccionarCarburante(carburante)">
       <option *ngFor="let tipo of tiposCarburantes">{{ tipo }}</option>
     </select>
   </div>

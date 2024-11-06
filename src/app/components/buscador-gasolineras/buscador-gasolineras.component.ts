@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 import { GasolineraService } from '../../services/gasolinera.service';
-import { ListaEessprecio } from '../../interfaces/gasolinera.interface';
+import { BuscadorMunicipiosComponent } from '../../components/buscador-municipios/buscador-municipios.component'
 
 @Component({
   selector: 'app-buscador-gasolineras',
@@ -29,17 +29,18 @@ export class BuscadorGasolinerasComponent {
 
   obtenerGasolinerasPorMunicipio(municipio: string) {
     this.gasolinerasFiltradas = [];
-    this.service.getGasolineras().subscribe((res: { ListaEESSPrecio: ListaEessprecio[] }) => {
-      res.ListaEESSPrecio.forEach(gasolinera => {
+    this.service.getGasolineras().subscribe(( res) => {
+      res.ListaEESSPrecio.forEach((gasolinera:any) => {
+       let gasolineraWena = BuscadorMunicipiosComponent.parseGasolinera(gasolinera)
         if (gasolinera.Municipio.toLowerCase() === municipio.toLowerCase()) {
-          // Accede a la propiedad de precio en función del carburante seleccionado
+          
           let precio = 'N/A';
           if (this.carburante === 'Gasóleo') {
-            precio = gasolinera['Precio Gasoleo A'];
+            precio = gasolinera['Precio Gasóleo'];
           } else if (this.carburante === 'Gasolina') {
-            precio = gasolinera['Precio Gasolina 95 E5'];
+            precio = gasolinera['Precio Gasolina'];
           } else if (this.carburante === 'Hidrógeno') {
-            precio = gasolinera['Precio Hidrogeno'];
+            precio = gasolinera['Precio Hidrógeno'];
           }
 
           this.gasolinerasFiltradas.push({
@@ -52,9 +53,10 @@ export class BuscadorGasolinerasComponent {
     });
   }
 
-  seleccionarCarburante(value: string) {
-    this.carburante = value;  
-    this.carburanteSeleccionado.emit(value); 
+  seleccionarCarburante(carburante: string) {
+    this.carburante = carburante;  
+    this.carburanteSeleccionado.emit(carburante); 
+    this.obtenerGasolinerasPorMunicipio(this.municipio)
   }
   
 }

@@ -16,7 +16,7 @@ export class GasolinerasComponent {
   precioFiltrado!: string;
 
   llamadaMunicipio(municipio: string) {
-    this.municipioSeleccionado = municipio;
+    this.municipio = municipio;
   }
 
   actualizarCarburante(carburante: string) {
@@ -28,7 +28,7 @@ export class GasolinerasComponent {
   }
 
   lasPatate(promotor: string) {
-
+    
   }
 
 }
