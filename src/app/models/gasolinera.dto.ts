@@ -1,4 +1,5 @@
 export class Gasolinera {
+
     constructor(
     public CP /*C.P. */: string,
     public Direccion: string,
@@ -26,4 +27,8 @@ export class Gasolinera {
     public Rotulo: string,
     public IDEESS: string,
     ){}
+  }
+
+  export interface GasolineraResponse {
+    ListaEESSPrecio: Gasolinera[];
   }

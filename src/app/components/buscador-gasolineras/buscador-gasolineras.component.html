@@ -1,18 +1,26 @@
 <div id="buscadores">
-  <h6 id="titulos">{{titulo}}</h6>
+  <h5 id="titulos">{{titulo}}</h5>
 
   <div>
     <label for="carburante">Carburante:</label>
-    <select id="carburante" (change)="seleccionarCarburante(carburante)">
-      <option *ngFor="let tipo of tiposCarburantes">{{ tipo }}</option>
+    <select id="carburante" (change)="seleccionarCarburante(carburanteSeleccionado)">
+      <option *ngFor="let tipo of tiposCarburantes" [value]="tipo.nombre">
+        {{ tipo.nombre }}
+      </option>
     </select>
   </div>
-  
-  <ul>
-    <li *ngFor="let gasolinera of gasolinerasFiltradas">
-      <p>{{gasolinera.Rotulo}}</p>
-    </li>
-  </ul>
-  
+
+  <div class="p-2 d-flex justify-content-center">
+    <div class="exterior">
+      <div *ngFor="let gasolinera of gasolinerasFiltradas" class="container">
+        <div class="info">
+          <p class="nombre"><strong>{{ gasolinera.Rotulo }}</strong></p>
+          <p class="direccion">{{ gasolinera.Direccion }}</p>
+        </div>
+        <div class="precio">
+          <p><strong>{{ obtenerPrecioCarburante(gasolinera) }}€/L</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-  

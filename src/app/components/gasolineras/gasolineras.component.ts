@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { GasolineraService } from '../../services/gasolinera.service';
+import { BuscadorMunicipiosComponent } from '../../components/buscador-municipios/buscador-municipios.component'
 import { Gasolinera } from '../../models/gasolinera.dto';
+
 
 @Component({
   selector: 'app-gasolineras',
@@ -19,15 +20,16 @@ export class GasolinerasComponent {
     this.municipio = municipio;
   }
 
-  actualizarCarburante(carburante: string) {
+  seleccionarCarburante(carburante: string) {
     this.carburanteSeleccionado = carburante;
-  }
+    
+  } 
 
   actualizarPrecio(precio: string) {
     this.precioFiltrado = precio;
   }
 
-  mostrarLista(promotor: string, carburante:string, precio:string) {
+  mostrarGasolineraSeleccionada(gasolinera: Gasolinera) {
     
   }
 

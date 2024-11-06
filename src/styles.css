@@ -35,6 +35,9 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     display: grid;
     overflow: scroll;
 }
+.buscador-municipios::-webkit-scrollbar{
+    display: none;
+}
 .gasolinera-celda{
     border: #D5FFA1, solid, 1pt;
     background-color: #E8FFCC;
@@ -82,5 +85,77 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     border: #c4f884, solid, 1pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
 }
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 15px; 
+    padding-bottom: 10px;
+    border: #D5FFA1, solid, 1pt;
+    background-color: #E8FFCC;
+    height: 58pt;
+    border-radius: 19px;
+    padding-top: 7.5pt;
+    margin-top: 10px;
+}
+  
+.info {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+  
+.nombre {
+    font-weight: bold; 
+    font-size: 16px; 
+    text-align: left; 
+}
+  
+.direccion {
+    font-size: 14px; 
+    color: #555;
+    text-align: left;
+}
+  
+.precio {
+    align-self: flex-end;
+    font-size: 16px; 
+}
+
+.gasolineras{
+    
+    min-height: 88vh;
+    max-height: 88vh;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    display: grid;
+    overflow: scroll;
+    padding: 24pt;
+}
+
+.gasolineras::-webkit-scrollbar{
+    display: none;
+}
+
+.exterior{
+    width: 75%;
+    min-height: 88vh;
+    max-height: 88vh;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    display: grid;
+    overflow: scroll;
+    padding: 5%;
+    padding-right: 12%;
+    border: #D5FFA1, solid, 1pt;
+}
+.exterior::-webkit-scrollbar{
+    display: none;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
