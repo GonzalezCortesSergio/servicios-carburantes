@@ -4,7 +4,7 @@
 
     <div>
       <label for="carburante">Carburante:</label>
-      <select id="carburante" (change)="seleccionarCarburante(carburanteSeleccionado)">
+      <select id="carburante" [(ngModel)]="carburanteSeleccionado" (change)="seleccionarCarburante(carburanteSeleccionado)">
         <option *ngFor="let tipo of tiposCarburantes" [value]="tipo.nombre">
           {{ tipo.nombre }}
         </option>
@@ -18,8 +18,12 @@
             <p class="nombre"><strong>{{ gasolinera.Rotulo }}</strong></p>
             <p class="direccion">{{ gasolinera.Direccion }}</p>
           </div>
+
           <div class="precio">
-            <p><strong>{{ obtenerPrecioCarburante(gasolinera) }}€/L</strong></p>
+            <p *ngIf="carburanteSeleccionado === 'Gasóleo'"><strong>{{ gasolinera.PrecioGasoleoA }}€/L</strong></p>
+            <p *ngIf="carburanteSeleccionado === 'Gasolina'"><strong>{{ gasolinera.PrecioGasolina95E5 }}€/L</strong></p>
+            <p *ngIf="carburanteSeleccionado === 'Hidrógeno'"><strong>{{ gasolinera.PrecioHidrogen }}€/L</strong></p>
+            <p *ngIf="!carburanteSeleccionado"><strong>N/A</strong></p>
           </div>
         </div>
       </div>
