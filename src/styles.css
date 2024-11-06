@@ -6,6 +6,7 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 #buscadores{
     margin: 12pt;
     text-align: center;
+    
 }
 
 #titulos{
@@ -14,10 +15,9 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 
 #buscador{
     min-width: 470px;
-    background-color: #E8FFCC;
     max-height: 41pt;
     margin-bottom: 20pt;
-
+    background-color: #e3fac6;
 }
 
 .row{
@@ -142,6 +142,19 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 .exterior{
     width: 75%;
     min-height: 88vh;
+    background-color: white;
+    margin: 25pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    display: grid;
+    padding: 5%;
+    padding-right: 12%;
+    border: #D5FFA1, solid, 1pt;
+}
+
+.buscador-gasolineras{
+    width: 28%;
+    min-height: 88vh;
     max-height: 88vh;
     background-color: white;
     margin: 25pt;
@@ -149,11 +162,9 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     border-radius: 19pt;
     display: grid;
     overflow: scroll;
-    padding: 5%;
-    padding-right: 12%;
-    border: #D5FFA1, solid, 1pt;
 }
-.exterior::-webkit-scrollbar{
+
+.buscador-gasolineras::-webkit-scrollbar{
     display: none;
 }
 

@@ -86,11 +86,11 @@ export class BuscadorGasolinerasComponent implements OnInit {
     const carburante = this.carburanteSeleccionado;
     switch (carburante) {
       case 'Gasóleo':
-        return gasolinera.PrecioGasoleoA || 'N/A';
+        return gasolinera.PrecioGasoleoA ;
       case 'Gasolina':
-        return gasolinera.PrecioGasolina95E5 || 'N/A';
+        return gasolinera.PrecioGasolina95E5 ;
       case 'Hidrógeno':
-        return gasolinera.PrecioHidrogen || 'N/A';
+        return gasolinera.PrecioHidrogen;
       default:
         return 'N/A';
     }
