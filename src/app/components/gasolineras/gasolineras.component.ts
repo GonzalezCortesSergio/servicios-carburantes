@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GasolineraService } from '../../services/gasolinera.service';
+import { Gasolinera } from '../../models/gasolinera.dto';
 
 @Component({
   selector: 'app-gasolineras',
@@ -8,8 +9,7 @@ import { GasolineraService } from '../../services/gasolinera.service';
 })
 export class GasolinerasComponent {
 
-  municipio = "Gasolineras"
-  
+  municipio = "Gasolineras"  
 
   municipioSeleccionado!: string;
   carburanteSeleccionado!: string;
@@ -27,7 +27,7 @@ export class GasolinerasComponent {
     this.precioFiltrado = precio;
   }
 
-  lasPatate(promotor: string) {
+  mostrarLista(promotor: string, carburante:string, precio:string) {
     
   }
 

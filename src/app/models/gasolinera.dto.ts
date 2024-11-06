@@ -1,7 +1,7 @@
 export class Gasolinera {
     constructor(
     public CP /*C.P. */: string,
-    public Dirección: string,
+    public Direccion: string,
     public Horario: string,
     public Latitud: string,
     public Localidad: string,
@@ -22,8 +22,8 @@ export class Gasolinera {
     public PrecioGasolina98E5: string,
     public PrecioHidrogen: string,
     public Provincia: string,
-    public Remisión: string,
-    public Rótulo: string,
+    public Remision: string,
+    public Rotulo: string,
     public IDEESS: string,
     ){}
   }

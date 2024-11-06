@@ -60,7 +60,7 @@ export class BuscadorMunicipiosComponent implements OnInit{
     gasolinera = JSON.parse(gasolineraString);
 
     gasolineraWena.CP = gasolinera["C.P."];
-    gasolineraWena.Dirección = gasolinera["Dirección"];
+    gasolineraWena.Direccion = gasolinera["Dirección"];
     gasolineraWena.Horario = gasolinera["Horario"];
     gasolineraWena.IDEESS = gasolinera["IDEESS"];
     gasolineraWena.Latitud = gasolinera["Latitud"];
@@ -82,8 +82,8 @@ export class BuscadorMunicipiosComponent implements OnInit{
     gasolineraWena.PrecioGasolina98E5 = gasolinera["Precio Gasolina 98 E5"];
     gasolineraWena.PrecioHidrogen = gasolinera["Precio Hidrogeno"];
     gasolineraWena.Provincia = gasolinera["Provincia"];
-    gasolineraWena.Remisión = gasolinera["Remisión"];
-    gasolineraWena.Rótulo = gasolinera["Rótulo"];
+    gasolineraWena.Remision = gasolinera["Remisión"];
+    gasolineraWena.Rotulo = gasolinera["Rótulo"];
     gasolineraWena.IDEESS = gasolinera["IDEESS"];
 
     return gasolineraWena;

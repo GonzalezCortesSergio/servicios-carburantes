@@ -13,7 +13,11 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 }
 
 #buscador{
-    min-width: 400px;
+    min-width: 470px;
+    background-color: #E8FFCC;
+    max-height: 41pt;
+    margin-bottom: 20pt;
+
 }
 
 .row{
@@ -34,6 +38,9 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 .gasolinera-celda{
     border: #D5FFA1, solid, 1pt;
     background-color: #E8FFCC;
+    height: 34pt;
+    border-radius: 19px;
+    padding-top: 7.5pt;
     
 }
 .gasolinera-celda:hover{
@@ -67,6 +74,13 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     margin-top: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
+}
+
+.gasolinera-tabla{
+    padding: 5pt;
+    border-radius: 19px;
+    border: #c4f884, solid, 1pt;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
