@@ -32,44 +32,15 @@ export class BuscadorGasolinerasComponent implements OnInit {
   }
 
   obtenerGasolineras() {
-    this.gasolinerasFiltradas = [];  
-
+    this.gasolinerasFiltradas = [];
+    
     this.service.getGasolineras().subscribe((response) => {
       const gasolineras = response.ListaEESSPrecio;
 
-      if (this.municipio) {
-        for (let i = 0; i < gasolineras.length; i++) {
-          const gasolinera = gasolineras[i];
-          if (gasolinera.Municipio.toLowerCase() === this.municipio.toLowerCase()) {
-            let gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolinera);
-            this.gasolinerasFiltradas.push(gasolineraParsed);
-          }
-        }
-      } else {
-
-        for (let i = 0; i < gasolineras.length; i++) {
-          let gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolineras[i]);
-          this.gasolinerasFiltradas.push(gasolineraParsed);
-        }
-      }
-    });
-  }
-
-  obtenerGasolinerasPorMunicipio(municipio: string) {
-    this.gasolinerasFiltradas = [];
-    this.service.getGasolineras().subscribe((res) => {
-      const gasolineras = res.ListaEESSPrecio;
       for (let i = 0; i < gasolineras.length; i++) {
-        let gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolineras[i]);
-        const propiedadCarburante = this.tiposCarburantes.find(
-          tipo => tipo.nombre === this.carburanteSeleccionado
-        )?.propiedad as keyof Gasolinera;
-
-        if (
-          gasolineraParsed.Municipio.toLowerCase() === municipio.toLowerCase() &&
-          propiedadCarburante &&
-          gasolineraParsed[propiedadCarburante]
-        ) {
+        const gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolineras[i]);
+        
+        if (!this.municipio || gasolineraParsed.Municipio.toLowerCase() === this.municipio.toLowerCase()) {
           this.gasolinerasFiltradas.push(gasolineraParsed);
         }
       }
@@ -77,9 +48,7 @@ export class BuscadorGasolinerasComponent implements OnInit {
   }
 
   seleccionarCarburante(carburante: string) {
-    this.carburante = carburante;
     this.carburanteSeleccionado = carburante;
-    this.obtenerGasolinerasPorMunicipio(this.municipio);
   }
   
   obtenerPrecioCarburante(gasolinera: Gasolinera): string {

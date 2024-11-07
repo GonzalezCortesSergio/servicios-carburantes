@@ -1,6 +1,6 @@
 <div id="buscadores">
   <div class="buscador-gasolinera">
-    <h5 id="titulos">{{titulo}}</h5>
+    <h5 id="titulos">{{ titulo }}</h5>
 
     <div>
       <label for="carburante">Carburante:</label>
@@ -13,19 +13,19 @@
 
     <div class="p-2 d-flex justify-content-center">
       <div class="exterior">
-        <div *ngFor="let gasolinera of gasolinerasFiltradas" class="container">
-          <div class="info">
-            <p class="nombre"><strong>{{ gasolinera.Rotulo }}</strong></p>
-            <p class="direccion">{{ gasolinera.Direccion }}</p>
-          </div>
+        <ng-container *ngFor="let gasolinera of gasolinerasFiltradas">
+          <!-- Condición para mostrar todas las gasolineras si el título es "Gasolineras" -->
+          <div *ngIf="titulo.toLowerCase() === 'gasolineras' || gasolinera.Municipio.toLowerCase() === titulo.toLowerCase()" class="container">
+            <div class="info">
+              <p class="nombre"><strong>{{ gasolinera.Rotulo }}</strong></p>
+              <p class="direccion">{{ gasolinera.Direccion }}</p>
+            </div>
 
-          <div class="precio">
-            <p *ngIf="carburanteSeleccionado === 'Gasóleo'"><strong>{{ gasolinera.PrecioGasoleoA }}€/L</strong></p>
-            <p *ngIf="carburanteSeleccionado === 'Gasolina'"><strong>{{ gasolinera.PrecioGasolina95E5 }}€/L</strong></p>
-            <p *ngIf="carburanteSeleccionado === 'Hidrógeno'"><strong>{{ gasolinera.PrecioHidrogen }}€/L</strong></p>
-            <p *ngIf="!carburanteSeleccionado"><strong>N/A</strong></p>
+            <div class="precio">
+              <p><strong>{{ obtenerPrecioCarburante(gasolinera) }} €/L</strong></p>
+            </div>
           </div>
-        </div>
+        </ng-container>
       </div>
     </div>
   </div>
