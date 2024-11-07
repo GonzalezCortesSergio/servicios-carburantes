@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
 import { CarburantesComponent } from './components/carburantes/carburantes.component';
 import { PrecioComponent } from './components/precio/precio.component';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PrecioComponent } from './components/precio/precio.component';
     GasolinerasComponent,
     BuscadorGasolinerasComponent,
     CarburantesComponent,
-    PrecioComponent
+    PrecioComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
