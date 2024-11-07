@@ -64,4 +64,9 @@ export class BuscadorGasolinerasComponent implements OnInit {
         return 'N/A';
     }
   }
+
+  onClick(gasolinera: Gasolinera) {
+
+    this.gasolineraSeleccionada.emit(gasolinera);
+  }
 }

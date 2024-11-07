@@ -16,6 +16,8 @@ export class GasolinerasComponent {
   carburanteSeleccionado!: string;
   precioFiltrado!: string;
 
+  gasolinera!: Gasolinera;
+
   llamadaMunicipio(municipio: string) {
     this.municipio = municipio;
   }
@@ -30,7 +32,7 @@ export class GasolinerasComponent {
   }
 
   mostrarGasolineraSeleccionada(gasolinera: Gasolinera) {
-    
+    this.gasolinera = gasolinera;
   }
 
 }

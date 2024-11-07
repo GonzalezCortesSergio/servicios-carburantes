@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { Gasolinera } from '../../models/gasolinera.dto';
 
-
 @Component({
-  selector: 'app-carburantes',
-  templateUrl: './carburantes.component.html',
-  styleUrl: './carburantes.component.css'
+  selector: 'app-detalles',
+  templateUrl: './detalles.component.html',
+  styleUrl: './detalles.component.css'
 })
-export class CarburantesComponent {
+export class DetallesComponent {
 
   @Input()
   gasolinera!: Gasolinera;
+
 
 }

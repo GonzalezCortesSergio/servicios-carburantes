@@ -70,13 +70,40 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
+    min-height: 40vh;
+    padding-top: 5.5%;
+    padding-bottom: 4%;
+}
+
+.carburantes-exterior{
+    width: 75%;
+    min-height: 30vh;
+    background-color: white;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    justify-content: center;
+    border: #D5FFA1, solid, 1pt;
+    
 }
 
 .informacion{
     background-color: rgb(255, 255, 255);
-    margin-top: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
+    min-height: 40vh;
+    padding-top: 5.5%;
+    padding-bottom: 4%;
+    margin-top: 15.3%;
+}
+
+.informacion-exterior{
+    width: 75%;
+    min-height: 30vh;
+    background-color: white;
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    justify-content: center;
+    border: #D5FFA1, solid, 1pt;
 }
 
 .gasolinera-tabla{
