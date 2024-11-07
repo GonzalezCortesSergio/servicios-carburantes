@@ -16,6 +16,7 @@ import { CarburantesComponent } from './components/carburantes/carburantes.compo
 import { PrecioComponent } from './components/precio/precio.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
+import { CommaToDotPipe } from './pipes/comma-to-dot.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
     CarburantesComponent,
     PrecioComponent,
     DetallesComponent,
-    GoogleMapsLinkPipe
+    GoogleMapsLinkPipe,
+    CommaToDotPipe
   ],
   imports: [
     BrowserModule,

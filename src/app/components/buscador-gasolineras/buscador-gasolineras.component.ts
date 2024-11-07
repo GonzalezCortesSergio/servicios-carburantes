@@ -23,6 +23,8 @@ export class BuscadorGasolinerasComponent implements OnInit {
   
   gasolinerasFiltradas: Gasolinera[] = [];
   carburante!: string;
+  minPrice: number = 0; 
+  maxPrice: number = 2;
   
   constructor(private service: GasolineraService) {}
 
@@ -68,5 +70,10 @@ export class BuscadorGasolinerasComponent implements OnInit {
   onClick(gasolinera: Gasolinera) {
 
     this.gasolineraSeleccionada.emit(gasolinera);
+  }
+
+  isPriceWithinRange(gasolinera: Gasolinera, min: number, max: number): boolean {
+    const price = parseFloat(this.obtenerPrecioCarburante(gasolinera));
+    return price >= min && price <= max;
   }
 }
