@@ -13,7 +13,8 @@
 
     <div class="p-2 d-flex justify-content-center">
       <div class="exterior">
-        <ng-container *ngFor="let gasolinera of gasolinerasFiltradas">
+        @for (gasolinera of gasolinerasFiltradas; track $index) {
+          <div (click)="onClick(gasolinera)">
           <!-- Condición para mostrar todas las gasolineras si el título es "Gasolineras" -->
           <div *ngIf="titulo.toLowerCase() === 'gasolineras' || gasolinera.Municipio.toLowerCase() === titulo.toLowerCase()" class="container">
             <div class="info">
@@ -25,7 +26,8 @@
               <p><strong>{{ obtenerPrecioCarburante(gasolinera) }} €/L</strong></p>
             </div>
           </div>
-        </ng-container>
+        </div>
+      }
       </div>
     </div>
   </div>

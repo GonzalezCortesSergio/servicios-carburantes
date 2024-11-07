@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Gasolinera } from '../../models/gasolinera.dto';
 
 
 @Component({
@@ -7,8 +8,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './carburantes.component.css'
 })
 export class CarburantesComponent {
-/*
+
   @Input()
-  gasolinera!: ListaEessprecio;*/
+  gasolinera!: Gasolinera;
 
 }
