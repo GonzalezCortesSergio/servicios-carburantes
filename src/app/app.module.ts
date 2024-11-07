@@ -15,6 +15,7 @@ import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/
 import { CarburantesComponent } from './components/carburantes/carburantes.component';
 import { PrecioComponent } from './components/precio/precio.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DetallesComponent } from './components/detalles/detalles.component';
     BuscadorGasolinerasComponent,
     CarburantesComponent,
     PrecioComponent,
-    DetallesComponent
+    DetallesComponent,
+    GoogleMapsLinkPipe
   ],
   imports: [
     BrowserModule,

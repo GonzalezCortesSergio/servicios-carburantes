@@ -36,7 +36,9 @@
             </tr>
         </tbody>
     </table>
+    @if(gasolinera != null){
     <div class="text-center">
-        <a [href]="mapsUrl()" class="btn btn-dark">Ver en el mapa</a>
+        <a [href]="gasolinera | googleMapsLink" target="_blank" class="btn btn-dark">Mostrar en el mapa</a>
     </div>
+}
 </div>
