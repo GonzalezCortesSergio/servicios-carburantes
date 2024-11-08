@@ -19,6 +19,7 @@ import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
 import { CommaToDotPipe } from './pipes/comma-to-dot.pipe';
 import { BuscadorCpComponent } from './components/buscador-cp/buscador-cp.component';
 import { BuscadorComunidadProvinciaComponent } from './components/buscador-comunidad-provincia/buscador-comunidad-provincia.component';
+import { FiltroCpComponent } from './components/filtro-cp/filtro-cp.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BuscadorComunidadProvinciaComponent } from './components/buscador-comun
     GoogleMapsLinkPipe,
     CommaToDotPipe,
     BuscadorCpComponent,
-    BuscadorComunidadProvinciaComponent
+    BuscadorComunidadProvinciaComponent,
+    FiltroCpComponent
   ],
   imports: [
     BrowserModule,
