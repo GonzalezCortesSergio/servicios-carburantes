@@ -32,9 +32,15 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     width: 100%;
 }
 .buscador-municipios{
+<<<<<<< HEAD
     width: 100%;
     min-height: 70vh;
     max-height: 70vh;
+=======
+    width: 25%;
+    min-height: 38vh;
+    max-height: 38vh;
+>>>>>>> main
     background-color: white;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
