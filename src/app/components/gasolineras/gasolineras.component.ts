@@ -11,6 +11,7 @@ import { Gasolinera } from '../../models/gasolinera.dto';
 export class GasolinerasComponent {
 
   municipio = "Gasolineras"  
+  codigoPostalSeleccionado!: string;
 
   municipioSeleccionado!: string;
   carburanteSeleccionado!: string;
@@ -33,6 +34,11 @@ export class GasolinerasComponent {
 
   mostrarGasolineraSeleccionada(gasolinera: Gasolinera) {
     this.gasolinera = gasolinera;
+  }
+
+  buscarPorCodigoPostal(cp: string) {
+
+    this.codigoPostalSeleccionado = cp;
   }
 
 }

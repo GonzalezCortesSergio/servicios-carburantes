@@ -13,6 +13,7 @@ export class BuscadorGasolinerasComponent implements OnInit {
   @Input() titulo!: string;
   @Input() municipio!: string;
   @Input() carburanteSeleccionado!: string;
+  @Input() codigoPostalSeleccionado!: string;
   @Output() gasolineraSeleccionada = new EventEmitter<Gasolinera>();
 
   tiposCarburantes = [
@@ -42,7 +43,7 @@ export class BuscadorGasolinerasComponent implements OnInit {
       for (let i = 0; i < gasolineras.length; i++) {
         const gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolineras[i]);
         
-        if (!this.municipio || gasolineraParsed.Municipio.toLowerCase() === this.municipio.toLowerCase()) {
+        if (!this.municipio || gasolineraParsed.Municipio.toLowerCase() === this.municipio.toLowerCase() || this.codigoPostalSeleccionado == gasolineraParsed.CP) {
           this.gasolinerasFiltradas.push(gasolineraParsed);
         }
       }

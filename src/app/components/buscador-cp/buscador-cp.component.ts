@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CodigoPostal } from '../../interfaces/codigo-postal.interface';
 import { CodigoPostalService } from '../../services/codigo-postal.service';
 import { map, Observable, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
@@ -14,8 +13,9 @@ export class BuscadorCpComponent implements OnInit{
   listaCodigosPostales: number[] = [];
   codigoPostal = new FormControl("");
   filteredOptions!: Observable<number[]>;
+  codigoPostalABuscar = new EventEmitter<string>();
 
-  @Output() codigoPostalEscogido = new EventEmitter<number>;
+  @Output() codigoPostalEscogido = new EventEmitter<string>;
 
   constructor(private service: CodigoPostalService){}
 
@@ -42,5 +42,10 @@ export class BuscadorCpComponent implements OnInit{
     let valueNormal = parseInt(value);
 
     return this.listaCodigosPostales.filter(option => option == valueNormal );
+  }
+
+  buscarCodigoPostal(codigoPostal: FormControl) {
+
+    this.codigoPostalABuscar.emit(codigoPostal.value);
   }
 }
