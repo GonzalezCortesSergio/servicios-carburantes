@@ -11,19 +11,27 @@
       </select>
     </div>
 
+    <div class="mt-4">
+      <label>0€</label>
+      <input type="range" [(ngModel)]="maxPrice" min="0" max="2" step="0.01">
+      <label>2€</label>
+    </div>
+
+    <label> Hasta {{ maxPrice }} €/L</label>
+
     <div class="p-2 d-flex justify-content-center">
       <div class="exterior">
         @for (gasolinera of gasolinerasFiltradas; track $index) {
-          <div (click)="onClick(gasolinera)">
-          <!-- Condición para mostrar todas las gasolineras si el título es "Gasolineras" -->
+          <div (click)="onClick(gasolinera)" *ngIf="isPriceWithinRange(gasolinera, minPrice,maxPrice)">
+          
           <div *ngIf="titulo.toLowerCase() === 'gasolineras' || gasolinera.Municipio.toLowerCase() === titulo.toLowerCase()" class="container">
             <div class="info">
               <p class="nombre"><strong>{{ gasolinera.Rotulo }}</strong></p>
               <p class="direccion">{{ gasolinera.Direccion }}</p>
             </div>
 
-            <div class="precio">
-              <p><strong>{{ obtenerPrecioCarburante(gasolinera) }} €/L</strong></p>
+            <div class="precio" *ngIf="isPriceWithinRange(gasolinera, minPrice, maxPrice)">
+              <p><strong>{{ obtenerPrecioCarburante(gasolinera) | commaToDot}} €/L </strong></p>
             </div>
           </div>
         </div>

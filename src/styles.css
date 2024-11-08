@@ -25,11 +25,10 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     background-color: #F3EFEF;
 }
 .buscador-municipios{
-    width: 25%;
-    min-height: 38vh;
-    max-height: 38vh;
+    width: 100%;
+    min-height: 29vh;
+    max-height: 39vh;
     background-color: white;
-    margin: 25pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
     display: grid;
@@ -38,6 +37,22 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 .buscador-municipios::-webkit-scrollbar{
     display: none;
 }
+
+.buscador-cp{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    min-height: 40vh;
+    padding-top: 5.5%;
+    padding-bottom: 4%;
+    margin-top: 15.3%;
+}
+
+.buscador-cp-interior{
+    margin-top: 1%;
+    margin-left: 30%;
+}
+
 .gasolinera-celda{
     border: #D5FFA1, solid, 1pt;
     background-color: #E8FFCC;
@@ -53,7 +68,7 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 }
 
 .buscador-gasolineras{
-    width: 28%;
+    width: 20%;
     min-height: 85vh;
     background-color: white;
     margin: 25pt;
@@ -111,6 +126,8 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     border-radius: 19px;
     border: #c4f884, solid, 1pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    max-width: 470px;
+    margin-left: 9.5%;
 }
 .container {
     display: flex;
@@ -207,6 +224,7 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     margin-left: 12pt;
     background-color: #e3fac6;
   }
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

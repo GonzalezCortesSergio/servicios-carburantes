@@ -10,13 +10,14 @@ import { BuscadorMunicipiosComponent } from './components/buscador-municipios/bu
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { GasolinerasComponent } from './components/gasolineras/gasolineras.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
 import { CarburantesComponent } from './components/carburantes/carburantes.component';
 import { PrecioComponent } from './components/precio/precio.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
-import { FiltroCpComponent } from './components/filtro-cp/filtro-cp.component';
+import { CommaToDotPipe } from './pipes/comma-to-dot.pipe';
+import { BuscadorCpComponent } from './components/buscador-cp/buscador-cp.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,16 @@ import { FiltroCpComponent } from './components/filtro-cp/filtro-cp.component';
     PrecioComponent,
     DetallesComponent,
     GoogleMapsLinkPipe,
-    FiltroCpComponent
+    CommaToDotPipe,
+    BuscadorCpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
