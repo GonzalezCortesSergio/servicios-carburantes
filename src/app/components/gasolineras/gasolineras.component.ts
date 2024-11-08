@@ -42,4 +42,8 @@ export class GasolinerasComponent {
     this.codigoPostalSeleccionado = cp;
   }
 
+  buscarPorComPro(comunidadProvincia: ComunidadProvincia){
+    this.comunidadProvincia = comunidadProvincia
+  }
+
 }

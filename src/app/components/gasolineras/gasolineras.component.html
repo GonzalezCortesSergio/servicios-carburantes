@@ -2,12 +2,12 @@
 
     <h3 class="a mt-5"><em>Elija como desea filtrar:</em></h3>
 
-    <div class="otros-datos col-12 d-flex justify-content-center">        
-        <div>
-            <p>holi</p>
+    <div class="otros-datos col-12 d-block justify-content-center">        
+        <div class="filtro-com">
+            <app-buscador-comunidad-provincia (comunidadProvinciaSeleccionados)="buscarPorComPro($event)"></app-buscador-comunidad-provincia>
         </div>
         <div class="buscador-cp">
-            <app-buscador-cp (codigoPostalEscogido)="codigoPostalSeleccionado"></app-buscador-cp>
+            <app-buscador-cp (codigoPostalEscogido)="buscarPorCodigoPostal($event)"></app-buscador-cp>
         </div>  
     </div>
 

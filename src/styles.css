@@ -32,15 +32,9 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     width: 100%;
 }
 .buscador-municipios{
-<<<<<<< HEAD
-    width: 100%;
-    min-height: 70vh;
-    max-height: 70vh;
-=======
     width: 25%;
     min-height: 38vh;
     max-height: 38vh;
->>>>>>> main
     background-color: white;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
@@ -55,14 +49,28 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     border-radius: 19pt;
-    min-height: 36vh;
+    min-height: 35vh;
     padding-top: 5.5%;
     padding-bottom: 4%;
-    margin-top: 15.3%;
+    margin-top: 20%;
+    max-height: 35vh;
+    width: 100%;
 }
 
 .buscador-cp-interior{
     margin-top: 1%;
+}
+
+.filtro-com{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 5px rgb(209, 209, 209);
+    border-radius: 19pt;
+    min-height: 35vh;
+    padding-top: 5.5%;
+    padding-bottom: 4%;
+    margin-top: 6%;
+    max-height: 35vh;
+
 }
 
 .gasolinera-celda{
@@ -89,7 +97,6 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
 }
 .otros-datos{
     width: 25%;
-    margin: 25pt;
 }
 
 .otros-datos-2{
@@ -147,7 +154,7 @@ body { margin: 0; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sa
     border: #c4f884, solid, 1pt;
     box-shadow: 1px 5px 5px rgb(209, 209, 209);
     max-width: 470px;
-    margin-left: 9.5%;
+    margin-left: 14.5%;
 }
 .container {
     display: flex;
