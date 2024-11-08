@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { GasolineraService } from '../../services/gasolinera.service';
-import { Gasolinera } from '../../models/gasolinera.dto';
+import { ComunidadProvincia, Gasolinera } from '../../models/gasolinera.dto';
 import { BuscadorMunicipiosComponent } from '../../components/buscador-municipios/buscador-municipios.component';
 
 @Component({
@@ -12,6 +12,7 @@ export class BuscadorGasolinerasComponent implements OnInit {
 
   @Input() titulo!: string;
   @Input() municipio!: string;
+  @Input() comunidadProvincia!: ComunidadProvincia;
   @Input() carburanteSeleccionado!: string;
   @Input() codigoPostalSeleccionado!: string;
   @Output() gasolineraSeleccionada = new EventEmitter<Gasolinera>();
@@ -43,8 +44,25 @@ export class BuscadorGasolinerasComponent implements OnInit {
       for (let i = 0; i < gasolineras.length; i++) {
         const gasolineraParsed = BuscadorMunicipiosComponent.parseGasolinera(gasolineras[i]);
         
-        if (!this.municipio || gasolineraParsed.Municipio.toLowerCase() === this.municipio.toLowerCase() || this.codigoPostalSeleccionado == gasolineraParsed.CP) {
+        if (!this.municipio || gasolineraParsed.Municipio.toLowerCase() === this.municipio.toLowerCase()) {
           this.gasolinerasFiltradas.push(gasolineraParsed);
+        }
+        if(this.comunidadProvincia != null) {
+
+          if(this.comunidadProvincia.IDProvincia == undefined 
+            && this.comunidadProvincia.IDCCAA == gasolineraParsed.IDCCAA){
+
+              this.gasolinerasFiltradas.push(gasolineraParsed);
+          }
+          if(this.comunidadProvincia.IDProvincia != undefined ){
+
+            if(this.comunidadProvincia.IDCCAA == gasolineraParsed.IDCCAA
+              && this.comunidadProvincia.IDProvincia == gasolineraParsed.IDProvincia
+            ) {
+
+              this.gasolinerasFiltradas.push(gasolineraParsed);
+            }
+          }
         }
       }
     });

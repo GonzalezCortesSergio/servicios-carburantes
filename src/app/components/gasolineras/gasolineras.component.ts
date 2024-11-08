@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BuscadorMunicipiosComponent } from '../../components/buscador-municipios/buscador-municipios.component'
-import { Gasolinera } from '../../models/gasolinera.dto';
+import { ComunidadProvincia, Gasolinera } from '../../models/gasolinera.dto';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class GasolinerasComponent {
   municipioSeleccionado!: string;
   carburanteSeleccionado!: string;
   precioFiltrado!: string;
+  comunidadProvincia!: ComunidadProvincia;
 
   gasolinera!: Gasolinera;
 
