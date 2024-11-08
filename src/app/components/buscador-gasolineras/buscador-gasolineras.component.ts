@@ -73,7 +73,9 @@ export class BuscadorGasolinerasComponent implements OnInit {
   }
 
   isPriceWithinRange(gasolinera: Gasolinera, min: number, max: number): boolean {
-    const price = parseFloat(this.obtenerPrecioCarburante(gasolinera));
-    return price >= min && price <= max;
+
+    const price = this.obtenerPrecioCarburante(gasolinera).replaceAll(",", ".");
+    let priceFloat = parseFloat(price);
+    return priceFloat >= min && priceFloat <= max;
   }
 }
