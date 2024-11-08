@@ -1,11 +1,13 @@
 <h5 class="text-center mb-3">Detalles</h5>
+@if(gasolinera != null){
 <div class="informacion-exterior  mx-auto">
     <table class="table table-stripped">
         <tbody>
             <tr>
                 @if(gasolinera.Rotulo != "")
-                {
+                {   
                     <td class="d-flex justify-content-between">
+                        <span ><strong>NOMBRE:</strong></span>
                         <span>{{gasolinera.Rotulo}}</span>
                     </td>
                 }
@@ -14,6 +16,7 @@
                 @if(gasolinera.Direccion != "")
                 {
                     <td class="d-flex justify-content-between">
+                        <span ><strong>DIRECCIÓN:</strong></span>
                         <span>{{gasolinera.Direccion}}</span>
                     </td>
                 }
@@ -22,6 +25,7 @@
                 @if(gasolinera.CP != "")
                 {
                     <td class="d-flex justify-content-between">
+                        <span ><strong>CÓDIGO POSTAL:</strong></span>
                         <span>{{gasolinera.CP}}</span>
                     </td>
                 }
@@ -30,6 +34,7 @@
                 @if(gasolinera.Horario != "")
                 {
                     <td class="d-flex justify-content-between">
+                        <span ><strong>HORARIO:</strong></span>
                         <span>{{gasolinera.Horario}}</span>
                     </td>
                 }
@@ -42,3 +47,4 @@
     </div>
 }
 </div>
+}

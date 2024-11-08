@@ -1,3 +1,15 @@
+<div class="row d-flex justify-content-center"> 
+
+        <div class="otros-datos col-12 d-block justify-content-center">
+            <div class="buscador-municipios">
+                <app-buscador-municipios (nombre)="llamadaMunicipio($event)"></app-buscador-municipios>
+            </div> 
+            <div class="buscador-cp">
+                <app-buscador-cp (codigoPostalEscogido)="codigoPostalSeleccionado"></app-buscador-cp>
+            </div>   
+        </div> 
+              
+        
 <div class="row d-flex justify-content-center">
     <div class="buscador-municipios col-12 d-block justify-content-center">
         <div>
@@ -11,9 +23,12 @@
         <app-buscador-gasolineras 
         [titulo]="municipio"         
         [carburanteSeleccionado]="carburanteSeleccionado"
+        [codigoPostalSeleccionado]="codigoPostalSeleccionado"
+        [comunidadProvincia]="comunidadProvincia"
         (gasolineraSeleccionada)="mostrarGasolineraSeleccionada($event)">
         ></app-buscador-gasolineras>
     </div>
+    
     <div class="otros-datos col-12 d-block justify-content-center">
 
         <div class="carburantes">
