@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,7 +12,6 @@ import { GasolinerasComponent } from './components/gasolineras/gasolineras.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BuscadorGasolinerasComponent } from './components/buscador-gasolineras/buscador-gasolineras.component';
 import { CarburantesComponent } from './components/carburantes/carburantes.component';
-import { PrecioComponent } from './components/precio/precio.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { GoogleMapsLinkPipe } from './pipes/google-maps-link.pipe';
 import { CommaToDotPipe } from './pipes/comma-to-dot.pipe';
@@ -29,7 +27,6 @@ import { FiltroCpComponent } from './components/filtro-cp/filtro-cp.component';
     GasolinerasComponent,
     BuscadorGasolinerasComponent,
     CarburantesComponent,
-    PrecioComponent,
     DetallesComponent,
     GoogleMapsLinkPipe,
     CommaToDotPipe,

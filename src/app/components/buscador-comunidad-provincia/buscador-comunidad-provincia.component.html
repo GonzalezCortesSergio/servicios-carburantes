@@ -16,7 +16,7 @@
             <mat-label> Provincias </mat-label>
             <mat-select [(value)]="IDProvincia">
               @for (provincia of listaProvincias; track $index) {
-                <mat-option [value]="provincia.IDPovincia">{{provincia.Provincia}}</mat-option>
+                <mat-option [value]="provincia.IDProvincia">{{provincia.Provincia}}</mat-option>
               }
             </mat-select>
           </mat-form-field>
